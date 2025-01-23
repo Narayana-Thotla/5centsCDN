@@ -70,10 +70,7 @@ const PortfolioLayout = () => {
     // Add more items as needed
   ];
 
-  useEffect(() => {
-    fetchData();
-  }, [setportfolioItemss]);
-
+  
   // console.log(portfolioItemss[0]?.url);
 
   const fetchData = async () => {
@@ -90,7 +87,8 @@ const PortfolioLayout = () => {
   };
 
   console.log(portfolioItemss);
-  const handleSubmit = (e: any) => {
+
+  const handleSubmit:any = (e: any) => {
     e.preventDefault();
     if (!search) return;
     if (search.length < 3) {
@@ -109,6 +107,13 @@ const PortfolioLayout = () => {
       alert("No such user found!");
     }
   };
+
+
+  useEffect(() => {
+    fetchData();
+  }, [setportfolioItemss,fetchData]);
+
+
 
   return (
     <div className="flex h-screen bg-gray-50">
