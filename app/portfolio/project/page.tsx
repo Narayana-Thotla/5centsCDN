@@ -86,7 +86,7 @@ const PortfolioLayout = () => {
     
   };
 
-  console.log(portfolioItemss);
+  // console.log(portfolioItemss);
 
   const handleSubmit:any = (e: any) => {
     e.preventDefault();
@@ -109,9 +109,15 @@ const PortfolioLayout = () => {
   };
 
 
-  useEffect(() => {
-    fetchData();
-  }, [setportfolioItemss,fetchData]);
+  // useEffect(() => {
+  //   // fetchData();
+  // }, [setportfolioItemss]);
+  
+useEffect(() => {
+  
+  setportfolioItemss(portfolioItems);
+}, [setportfolioItemss])
+
 
 
 
