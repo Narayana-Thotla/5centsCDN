@@ -1,16 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import {
-  Filter,
   ListFilter,
   Home,
-  Book,
-  Award,
   User,
   FileInput,
-  BriefcaseBusiness
+  BriefcaseBusiness,
 } from "lucide-react";
-const footer = () => {
+const Footer = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const [activeTab, setActiveTab] = useState("Project");
@@ -58,7 +55,7 @@ const footer = () => {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t rounded-t-lg z-20">
         <nav className="flex justify-around items-center h-10 py-1">
           <button
-          onClick={() => setActiveTab("Home")}
+            onClick={() => setActiveTab("Home")}
             className={`flex flex-col items-center gap-1 py-1 border-t-2 ${
               activeTab === "Home"
                 ? "text-[#E84C3D] border-[#E84C3D]"
@@ -69,7 +66,7 @@ const footer = () => {
             <span className="text-[8px]">Home</span>
           </button>
           <button
-          onClick={() => setActiveTab("Portfolio")}
+            onClick={() => setActiveTab("Portfolio")}
             className={`flex flex-col items-center gap-1 py-1  border-t-2 ${
               activeTab === "Portfolio"
                 ? "text-[#E84C3D] border-[#E84C3D]"
@@ -80,7 +77,7 @@ const footer = () => {
             <span className="text-[8px]">Portfolio</span>
           </button>
           <button
-          onClick={() => setActiveTab("Input")}
+            onClick={() => setActiveTab("Input")}
             className={`flex flex-col items-center gap-1 py-1   border-t-2 ${
               activeTab === "Input"
                 ? "text-[#E84C3D] border-[#E84C3D]"
@@ -91,7 +88,7 @@ const footer = () => {
             <span className="text-[8px]">Input</span>
           </button>
           <button
-          onClick={() => setActiveTab("Profile")}
+            onClick={() => setActiveTab("Profile")}
             className={`flex flex-col items-center gap-1 py-1   border-t-2 ${
               activeTab === "Profile"
                 ? "text-[#E84C3D] border-[#E84C3D]"
@@ -107,4 +104,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

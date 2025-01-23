@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const tabs = () => {
+const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Project");
   return (
     <div>
@@ -76,4 +76,4 @@ const tabs = () => {
   );
 };
 
-export default tabs;
+export default Tabs;

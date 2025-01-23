@@ -1,6 +1,6 @@
 'use client';
-import Image from "next/image";
-import { DEFAULT_MAX_VERSION } from "tls";
+// import Image from "next/image";
+// import { DEFAULT_MAX_VERSION } from "tls";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

@@ -1,20 +1,20 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Menu,
-  X,
-  Bell,
-  Search,
-  ChevronRight,
-  Filter,
+  // Menu,
+  // X,
+  // Bell,
+  // Search,
+  // ChevronRight,
+  // Filter,
   LayoutDashboard,
   BriefcaseBusiness,
   FileInput,
   User,
 } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 
-const sidebar = () => {
+const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
     <div>
@@ -89,4 +89,4 @@ const sidebar = () => {
   );
 };
 
-export default sidebar;
+export default Sidebar;
