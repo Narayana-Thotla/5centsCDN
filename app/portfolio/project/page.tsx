@@ -73,7 +73,7 @@ const PortfolioLayout = () => {
   
   // console.log(portfolioItemss[0]?.url);
 
-  const fetchData = async () => {
+  // const fetchData = async () => {
     // const res = await fetch("http://localhost:1337/api/yoliday-datas", {
     // const res = await fetch("http://localhost:1337/api/yoliday-datas", {
     //   cache: "no-cache",
@@ -82,9 +82,9 @@ const PortfolioLayout = () => {
     // console.log(data.data);
     // setportfolioItemss(data.data);
     // if(!res.ok)
-       setportfolioItemss(portfolioItems);
+  //      setportfolioItemss(portfolioItems);
     
-  };
+  // };
 
   // console.log(portfolioItemss);
 

@@ -17,6 +17,7 @@ import {
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   // console.log(setIsSidebarOpen);
+  setIsSidebarOpen(true);
   return (
     <div>
       <nav className="mt-8">
