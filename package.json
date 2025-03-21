@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-ignore",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint --no-ignore"
+    "lint": "next lint"
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.2",
