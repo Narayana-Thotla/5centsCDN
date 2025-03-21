@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yoliday",
-  description: "Yoliday webapp",
+  title: "5centsCDN",
+  description: "5centsCDN inc",
 };
 
 export default function RootLayout({

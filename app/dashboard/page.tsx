@@ -26,14 +26,10 @@ const DashboardPage = () => {
   useEffect(() => {
     const token = localStorage.getItem("jwt-5centCDN");
 
-    if (token) {
-      // console.log("JWT Token:", token);
-      return;
-    } else {
+    if (!token) {
       router.push("/");
       alert("Unauthorized , please Login!!");
-      // console.log("No token found in localStorage");
-    }
+    } 
 
     getServerSideProps();
   }, []);
@@ -45,12 +41,14 @@ const DashboardPage = () => {
       if (!res.ok) throw new Error("Failed to fetch data");
 
       const data = await res.json();
-      console.log("data:", data.slice(0, 20));
+      // console.log("data:", data.slice(0, 20));
       if (data) setPosts(data.slice(0, 20));
       setloading(false);
       return { props: { initialPosts: data.slice(0, 20) } };
     } catch (error) {
       return { props: { initialPosts: [], error: "Error loading posts." } };
+    }finally{
+      setloading(false)
     }
   };
 
@@ -63,7 +61,7 @@ const DashboardPage = () => {
     const filteredItems = posts.filter((item: any) =>
       item.title.toLowerCase().includes(search.toLowerCase())
     );
-    console.log("search input:", filteredItems, search);
+    // console.log("search input:", filteredItems, search);
 
     if (filteredItems) {
       setPosts(filteredItems);
@@ -120,7 +118,7 @@ const DashboardPage = () => {
                 <form action="" onSubmit={handleSubmit}>
                   <input
                     type="text"
-                    placeholder="Search a project"
+                    placeholder="Search by id or Title"
                     className="pl-4 pr-10 py-2 border rounded-md w-64 mx-1.5 sm:w-64"
                     value={search}
                     onChange={(e) => {
@@ -138,8 +136,8 @@ const DashboardPage = () => {
           {/* //-------------------------------------------------------------------------------- */}
 
           {loading ? (
-            <div className="flex justify-center items-center h-screen">
-              <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+            <div className="flex justify-center items-center h-72 ">
+              <div className="w-12 h-12 border-4 border-[#E84C3D] border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : (
             <table className="w-full border-collapse shadow-lg rounded-lg overflow-hidden">

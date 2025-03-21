@@ -6,20 +6,19 @@ import React from "react";
 import { useState } from "react";
 const Signup = () => {
   const [loading, setloading] = useState(false);
-  // const { setauthUser } = UseAuthContext();
   const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem("jwt-5centCDN");
+    // const token = localStorage.getItem("jwt-5centCDN");
 
-    if (token) {
-      // console.log("JWT Token:", token);
-      router.push("/dashboard");
-    } else {
-      router.push("/");
-      alert("Unauthorized , please Login!!");
-      // console.log("No token found in localStorage");
-    }
+    // if (token) {
+    //   // console.log("JWT Token:", token);
+    //   router.push("/dashboard");
+    // } else {
+    //   router.push("/");
+    //   alert("Unauthorized , please Login!!");
+    //   // console.log("No token found in localStorage");
+    // }
   }, []);
 
   const [formData, setFormData] = useState({
@@ -45,7 +44,6 @@ const Signup = () => {
       return false;
     }
     if (formData.password.length < 6) {
-      // toast.error("Password should > 6 characters");
       alert("password should > 6 characters");
       return false;
     }
@@ -82,8 +80,8 @@ const Signup = () => {
   return (
     //
     <div className="text-white flex justify-center  ">
-      <div className="mt-7 w-[35%] h-[40vw]  glass-effect bg-slate-800 rounded-lg ">
-        <h1 className="mb-2 mt-20  text-center text-2xl font-bold text-gray-300 capitalize lg:text-3xl dark:text-white">
+      <div className="mt-7 w-[35%] h-[40vw]  glass-effect bg-[#E84C3D] rounded-lg ">
+        <h1 className="mb-2 mt-20  text-center text-2xl font-bold text-gray-100 capitalize lg:text-3xl dark:text-white">
           Login In
         </h1>
         <div className="flex justify-center ">
@@ -91,7 +89,7 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-left mb-2 text-sm text-gray-200 dark:text-gray-200"
+                className="block text-left mb-2 text-sm text-gray-100 dark:text-gray-200"
               >
                 Email
               </label>
@@ -102,7 +100,7 @@ const Signup = () => {
                 id="email"
                 onChange={handleChange}
                 placeholder="Enter Email"
-                className="block w-72 px-4 py-2 mb-2 text-gray-300 placeholder-gray-400 bg-gray-800 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900  dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 "
+                className="block w-72 px-4 py-2 mb-2 text-black placeholder-gray-500 bg-gray-100 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900  dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 "
               />
             </div>
 
@@ -110,7 +108,7 @@ const Signup = () => {
               <div className="flex justify-between mb-2">
                 <label
                   htmlFor="password"
-                  className="text-sm text-gray-200 dark:text-gray-200"
+                  className="text-sm text-gray-100 dark:text-gray-200"
                 >
                   Password
                 </label>
@@ -123,7 +121,7 @@ const Signup = () => {
                 id="password"
                 onChange={handleChange}
                 placeholder="Enter Password"
-                className="block w-72 px-4 py-2 mt-2 text-gray-300 placeholder-gray-400 bg-gray-800 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-72 px-4 py-2 mt-2 text-black placeholder-gray-500 bg-gray-100 border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
 
