@@ -71,29 +71,13 @@ const PortfolioLayout = () => {
   ];
 
   
-  // console.log(portfolioItemss[0]?.url);
-
-  // const fetchData = async () => {
-    // const res = await fetch("http://localhost:1337/api/yoliday-datas", {
-    // const res = await fetch("http://localhost:1337/api/yoliday-datas", {
-    //   cache: "no-cache",
-    // });
-    // const data = await res.json();
-    // console.log(data.data);
-    // setportfolioItemss(data.data);
-    // if(!res.ok)
-  //      setportfolioItemss(portfolioItems);
-    
-  // };
-
-  // console.log(portfolioItemss);
+  
 
   const handleSubmit:any = (e: any) => {
     e.preventDefault();
     if (!search) return;
     if (search.length < 3) {
       alert("Search input must be atleast 4 characters!");
-      // return toast.error("Search input must be atleast 4 characters!");
     }
     const filteredItems = portfolioItemss.filter((item) =>
       item.title.toLowerCase().includes(search.toLowerCase())
@@ -109,9 +93,6 @@ const PortfolioLayout = () => {
   };
 
 
-  // useEffect(() => {
-  //   // fetchData();
-  // }, [setportfolioItemss]);
   
 useEffect(() => {
   

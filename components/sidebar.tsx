@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import {
-  // Menu,
-  // X,
+  Menu,
+  X,
   // Bell,
   // Search,
   // ChevronRight,
@@ -15,14 +15,24 @@ import {
 // import Image from "next/image";
 
 const Sidebar = () => {
-  const [isSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   // console.log(setIsSidebarOpen);
   // setIsSidebarOpen(true);
 
-
-
   return (
     <div>
+      <div className="flex items-center justify-between p-4">
+        <div className={`text-white font-bold ${!isSidebarOpen && "hidden"}`}>
+          LOGO
+        </div>
+        <button
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          className="sm:hidden text-white hover:bg-[#c0392b] p-2 rounded-lg"
+        >
+          {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
       <nav className="mt-8">
         <div
           // className={`flex items-center px-4 py-2 text-white hover:bg-[#c0392b] cursor-pointer ${
